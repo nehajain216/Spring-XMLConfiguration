@@ -19,7 +19,7 @@
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/addressbook?useSSL=true"></property>
+			value="jdbc:mysql://localhost:3306/addressbooklist?useSSL=true"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="admin"></property>
 	</bean>
@@ -27,9 +27,5 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
-	<tx:annotation-driven />
-	<bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource"></property>
-	</bean>
+	
 </beans>
